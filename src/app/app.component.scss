@@ -1,15 +1,14 @@
 .header {
   background: #3364ff;
   padding: 1rem 0rem 1rem 0rem;
-
-  .content {
-    display: flex;
-    justify-content: center;
+  .height {
+    height: 2rem;
   }
 }
 
 .search-results {
   background: lightgray;
+  height: 100%;
   .card {
     img {
       width: 6rem;

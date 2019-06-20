@@ -15,11 +15,11 @@ export class AppComponent {
   // sort options
   sortOptions = [
     {
-      name: this.constants.SORT_BY_RANK, sort: this.constants.RANK, order: this.constants.ASC, class: this.constants.ARROW_DOWN_FONT
+      name: this.constants.BEST_MATCH, sort: this.constants.BEST_MATCH, order: this.constants.DESC
     },
-    {
-      name: this.constants.SORT_BY_RANK, sort: this.constants.RANK, order: this.constants.DESC, class: this.constants.ARROW_DOWN_UP
-    }
+    // {
+    //   name: this.constants.SORT_BY_RANK, sort: this.constants.RANK, order: this.constants.DESC, class: this.constants.ARROW_DOWN_UP
+    // }
   ];
   searchText: string = null;
   searchResult: SearchResult = null;

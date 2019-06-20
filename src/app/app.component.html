@@ -1,12 +1,14 @@
 <div class="w-100 header">
-  <div class="container content">
-    <div class="mr-5">
-      <select class="pr-5">
-        <option class="pr-5" *ngFor="let sort of sortOptions">{{sort.name}}<span [ngClass]="sort.class"></span></option>
-      </select>
-    </div>
-    <div class="ml-5">
-      <input type="search" [(ngModel)]="searchText" (keypress)="blockCharacters($event)" (keyup)="searchUsers()">
+  <div class="container w-50">
+    <div class="row">
+        <div class="col-md-5">
+            <select class="pr-5 w-75 height">
+              <option class="pr-5" *ngFor="let sort of sortOptions">{{sort.name}}<span [ngClass]="sort?.class"></span></option>
+            </select>
+          </div>
+          <div class="col-md-7">
+            <input type="search" placeholder="Search User" class="w-100 height" [(ngModel)]="searchText" (keypress)="blockCharacters($event)" (keyup)="searchUsers()">
+          </div>
     </div>
   </div>
 </div>
@@ -29,9 +31,9 @@
           </div>
       </div>
       <div class="d-flex flex-column justify-content-end">
-        <button data-toggle="collapse" [attr.data-target]="'#' + user.login" class="btn"
-        aria-expanded="false" [attr.aria-controls]="user.login"
-        (click)="getUserRepos(user)">Details</button>
+        <input type="button" data-toggle="collapse" [attr.data-target]="'#' + user.login" class="btn"
+        [attr.aria-expanded]="false" [attr.aria-controls]="user.login"
+        (click)="getUserRepos(user)" [value]="aria-expanded ? 'Collapse' : 'Details'">
       </div>
     </div>
   </div>

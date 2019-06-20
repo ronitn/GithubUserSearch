@@ -19,6 +19,7 @@ export class ConstantsService {
   readonly GITHUB_CLIENT_SECRET = 'ca381cff61a3ce44085e9b6a7be7a46ce7abd458';
   readonly CLIENT_ID = 'client_id';
   readonly CLIENT_SECRET = 'client_secret';
+  readonly BEST_MATCH = 'Best Match';
 
   constructor() { }
 }
