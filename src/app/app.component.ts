@@ -20,13 +20,15 @@ export class AppComponent {
     }
   ];
   searchText: string = null;
+  searchResult: SearchResult = null;
 
   constructor(private constants: ConstantsService, private github: GithubService) { }
 
   searchUsers() {
     if (this.searchText) {
       this.github.searchUsers(this.searchText).subscribe((searchResult: SearchResult) => {
-        console.log(searchResult);
+        this.searchResult = searchResult;
+        console.log(this.searchResult);
       });
     }
   }

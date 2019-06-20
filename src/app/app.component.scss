@@ -1,9 +1,20 @@
 .header {
-    background: #3364ff;
-    padding: 1rem 0rem 1rem 0rem;
+  background: #3364ff;
+  padding: 1rem 0rem 1rem 0rem;
 
-    .content {
-        display: flex;
-        justify-content: center;
+  .content {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.search-results {
+  background: lightgray;
+  .card {
+    img {
+      width: 6rem;
+      border-radius: 3rem;
+      margin-left: 1rem;
     }
+  }
 }

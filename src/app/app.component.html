@@ -10,3 +10,23 @@
     </div>
   </div>
 </div>
+<div class="w-100 search-results">
+  <div class="container w-50">
+    <h5 *ngIf="searchResult">Total Results: {{searchResult?.total_count}}</h5>
+    <div *ngFor="let user of searchResult?.items" class="card mb-3">
+      <div class="d-flex justify-content-between mt-3 mb-3">
+        <div>
+        <img [src]="user?.avatar_url ? user?.avatar_url : ''">
+      </div>
+      <div>
+        <h5>{{user.login}}</h5>
+        <div>Profile URL: <span>{{user.html_url}}</span></div>
+        <div>Score: <span>{{user.score}}</span></div>
+      </div>
+      <div class="d-flex flex-column justify-content-end">
+        <button class="btn">Details</button>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>

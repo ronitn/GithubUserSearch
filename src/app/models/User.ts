@@ -3,4 +3,5 @@ export class User {
     login: string;
     repos_url: string;
     score: string;
+    avatar_url: string;
 }
