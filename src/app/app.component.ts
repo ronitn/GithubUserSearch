@@ -32,23 +32,24 @@ export class AppComponent {
         this.searchResult = searchResult;
         console.log(this.searchResult);
       });
+    } else {
+      this.searchResult = null;
     }
   }
 
   getUserRepos(user: User) {
-    // this.github.searchUserRepos(user.repos_url).subscribe((userRepos: UserRepos) => {
-    //   console.log(userRepos);
-    //   user.repos = userRepos;
-    // });
+    this.github.searchUserRepos(user.repos_url).subscribe((userRepos: UserRepos[]) => {
+      console.log(userRepos);
+      user.repos = userRepos;
+    });
+  }
 
-    user.repos =
-      [
-        { 'name': 'Test', 'language': 'python' },
-        { 'name': 'Test', 'language': 'python' },
-        { 'name': 'Test', 'language': 'python' },
-        { 'name': 'Test', 'language': 'python' },
-        { 'name': 'Test', 'language': 'python' },
-        { 'name': 'Test', 'language': 'python' }
-      ]
+  // block space
+  blockCharacters(event: KeyboardEvent) {
+    console.log(typeof(event))
+    console.log(event)
+    if (event.keyCode === 32) { // key code for space
+      return false;
+    }
   }
 }

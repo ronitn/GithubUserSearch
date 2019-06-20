@@ -6,5 +6,5 @@ export class User {
     repos_url: string;
     score: string;
     avatar_url: string;
-    repos: UserRepos;
+    repos: UserRepos[];
 }
