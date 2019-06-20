@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { ConstantsService } from './services/constants.service';
 import { GithubService } from './services/github.service';
 import { SearchResult } from './models/SearchResult';
+import { User } from './models/User';
+import { UserRepos } from './models/UserRepos';
 
 @Component({
   selector: 'app-root',
@@ -31,5 +33,22 @@ export class AppComponent {
         console.log(this.searchResult);
       });
     }
+  }
+
+  getUserRepos(user: User) {
+    // this.github.searchUserRepos(user.repos_url).subscribe((userRepos: UserRepos) => {
+    //   console.log(userRepos);
+    //   user.repos = userRepos;
+    // });
+
+    user.repos =
+      [
+        { 'name': 'Test', 'language': 'python' },
+        { 'name': 'Test', 'language': 'python' },
+        { 'name': 'Test', 'language': 'python' },
+        { 'name': 'Test', 'language': 'python' },
+        { 'name': 'Test', 'language': 'python' },
+        { 'name': 'Test', 'language': 'python' }
+      ]
   }
 }

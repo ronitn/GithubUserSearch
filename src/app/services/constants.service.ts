@@ -13,6 +13,7 @@ export class ConstantsService {
   readonly ARROW_DOWN_UP = 'fas fa-arrow-up';
   readonly GITHUB_API_BASE = 'https://api.github.com';
   readonly SEARCH_USERS_GITHUB = '/search/users';
+  readonly USERS_GITHUB = '/users';
   readonly GITHUB_SEARCH_KEY = 'q';
 
   constructor() { }
